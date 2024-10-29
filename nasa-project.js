@@ -2,18 +2,9 @@
  * Copyright 2024 chirasvigowda
  * @license Apache-2.0, see LICENSE for full text.
  */
-import { LitElement, html, css } from "lit";
-import { DDDSuper } from "@haxtheweb/d-d-d/d-d-d.js";
-import { I18NMixin } from "@haxtheweb/i18n-manager/lib/I18NMixin.js";
-
-/**
- * `nasa-project`
- * 
- * @demo index.html
- * @element nasa-project
- */
-export class nasaProject extends DDDSuper(I18NMixin(LitElement)) {
-
+import { LitElement, html, css } from 'lit';
+import "./nasa-image.js";
+export class NasaSearch extends LitElement {
   static get properties() {
     return {
       title: { type: String },
