@@ -1,26 +1,26 @@
-# ## editors
-# /.idea
-# /.vscode
+## editors
+/.idea
+/.vscode
 
-# ## system files
-# .DS_Store
+## system files
+.DS_Store
 
-# ## npm
-# /node_modules/
-# /npm-debug.log
+## npm
+/node_modules/
+/npm-debug.log
 
-# ## testing
-# /coverage/
+## testing
+/coverage/
 
-# ## temp folders
-# /.tmp/
+## temp folders
+/.tmp/
 
-# # build
-# /_site/
-# /dist/
-# /out-tsc/
-# /public/
+# build
+/_site/
+/dist/
+/out-tsc/
+/public/
 
-# storybook-static
-# custom-elements.json
-# .vercel
+storybook-static
+custom-elements.json
+.vercel
