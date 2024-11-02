@@ -69,10 +69,12 @@ export class NasaSearch extends LitElement {
       </div>
     </details>
     <div class="results">
-      ${this.items.map((item, index) => html`
+      ${this.items.map((item) => html`
       <nasa-image
         source="${item.links[0].href}"
         title="${item.data[0].title}"
+        alt="${item.data[0].description || 'NASA Image'}"
+        secondaryCreator="${item.data[0].secondary_creator || 'Unknown'}" 
       ></nasa-image>
       `)}
     </div>
@@ -82,16 +84,13 @@ export class NasaSearch extends LitElement {
   inputChanged(e) {
     this.value = this.shadowRoot.querySelector('#input').value;
   }
-  // life cycle will run when anything defined in `properties` is modified
   updated(changedProperties) {
-    // see if value changes from user input and is not empty
     if (changedProperties.has('value') && this.value) {
       this.updateResults(this.value);
     }
     else if (changedProperties.has('value') && !this.value) {
       this.items = [];
     }
-    // @debugging purposes only
     if (changedProperties.has('items') && this.items.length > 0) {
       console.log(this.items);
     }
